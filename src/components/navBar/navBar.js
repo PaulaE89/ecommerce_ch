@@ -1,6 +1,8 @@
 import './navBar.css'
 import hammy from '../../assets/hammy.png'
 import hammyTitle from '../../assets/hammyTitle.png'
+import { CartWidget } from '../CartWidget/CartWidget'
+
 
 export const NavBar = () => {
 
@@ -19,6 +21,7 @@ export const NavBar = () => {
          <li onClick={alarm}>Category 2</li>
          <li onClick={alarm}>Category 3</li>
         </ul> 
+        <CartWidget></CartWidget>
     </nav> )
 
 }
