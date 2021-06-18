@@ -6,7 +6,7 @@ import './home.css'
 export const Home = () => {
         return ( 
             <div> <NavBar> </NavBar>  
-            <ItemListContainer></ItemListContainer>                
+            <ItemListContainer greeting='PAULA'/>                
             </div >
             
             )
