@@ -9,7 +9,7 @@ export const ItemCount = ({ value, stock }) => {
     const onAdd = () => {
         if (counter === 10) {
             setDisable(true)
-            alert(`there is  only ${stock} in stock`)
+            alert(`there is only ${stock} in stock`)
         } else {
             setCounter((c) => c + 1);
         }

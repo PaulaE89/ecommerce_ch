@@ -1,0 +1,7 @@
+.wrapper_products{
+
+    display: flex;
+    flex-direction: row;
+    margin:200px;
+    justify-content: center;
+}
