@@ -1,0 +1,29 @@
+.pictureDetail{
+
+    margin: 10px 40px;
+}
+
+
+.itemDetail{
+    display: flex;
+    flex-direction: row;
+}
+
+.informationDetail{
+
+    margin: 50px  20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleDetail{
+
+    font-size: 20px;
+}
+
+
+.priceDetail{
+    color:rgb(64,224,208);
+}

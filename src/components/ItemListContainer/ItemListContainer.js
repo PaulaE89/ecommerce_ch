@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react'
 
 import { ItemList } from '../ItemList/ItemList'
 
+import {ItemDetailContainer} from '../ItemDetailContainer/ItemDetailContainer'
+
 export const ItemListContainer = (props) => {
 
 
@@ -57,7 +59,7 @@ export const ItemListContainer = (props) => {
             <h1 className='list_items'>HELLO {props.greeting} ¡¡ </h1>
             <ItemCount value={0} stock='10' />
             {items ? (<ItemList items={items} />) : (<p className='loadItems'>LOADING PAGE ...</p>)}
-
+            <ItemDetailContainer/>
         </div>
     )
 }
