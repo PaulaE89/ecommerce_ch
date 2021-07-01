@@ -15,6 +15,7 @@ export const ItemDetail = (itemDetail) => {
                 <div className='descriptionDetail'> Description :  {itemDetail.itemDetail.description} </div>
                 <div className='priceDetail'>${itemDetail.itemDetail.price}</div>
             </div>
+       
         </div>
     )
 
