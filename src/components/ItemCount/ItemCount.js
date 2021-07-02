@@ -34,7 +34,7 @@ export const ItemCount = ({ value, stock }) => {
     return (
         <div className='btn_add_items'>
             <div className='btn_add_buy'>
-                <p>T-Shirt</p>
+              
                 <div className='btn_add_sub'>
                     <button onClick={subtraccion} className='btn_sign'>-</button>
                     <input value={counter} onChange={(e) => { handleChange(e) }} className='value_buy' ></input>
