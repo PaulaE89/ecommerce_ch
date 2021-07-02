@@ -9,9 +9,9 @@ export const NavBar = () => {
 
     return (
         <nav className="navBar">
-            <div className="left-navBar">
+            <NavLink to='/' className="left-navBar">
                 <img src={hammyTitle} className='hammyTitle' alt='hammyimage' href='/' />
-            </div>
+            </NavLink>
             <ul className="listItems" >
                 <li><NavLink exact to='/categories/category1' activeClassName='link-active' className='link'>Category1</NavLink></li>
                 <li><NavLink to='/categories/category2' activeClassName='link-active' className='link'>Category2</NavLink></li>

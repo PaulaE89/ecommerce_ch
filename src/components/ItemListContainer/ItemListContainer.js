@@ -58,9 +58,7 @@ export const ItemListContainer = (props) => {
             } else {
              
                 setItem(itemsPrueba.filter((elem) => elem.category === categoryId))
-
             }
-
 
         }).catch(err => {
             console.log('err :', err)
@@ -72,7 +70,7 @@ export const ItemListContainer = (props) => {
     return (
         <div>
             <h1 className='list_items'>HELLO {props.greeting} ¡¡ </h1>
-          
+     
             {items ? (<ItemList items={items} />) : (<p className='loadItems'>LOADING PAGE ...</p>)}
            
         </div>

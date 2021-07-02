@@ -19,37 +19,33 @@ export const ItemDetailContainer = () => {
         'title': 'T-shirt',
         'description': 'Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester ,Imported,Smooth and comfortable lightweight jersey fabric',
         'price': '123',
-        'size': 'M'
+        'size': 'S'
     },
     {
         'id': 2,
         'picture': 'https://picsum.photos/200/300',
         'title': 'Trousers',
-        'description': 'Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester ,Imported,Smooth and comfortable lightweight jersey fabric',
-        'price': '123',
+        'description': 'A flat-front dressy chino that offers classic style all week long; made to be wrinkle-resistant and easy-care with a traditional relaxed look and fit',
+        'price': '456',
         'size': 'M'
-
-
-
-
 
     },
     {
         'id': 3,
         'picture': 'https://picsum.photos/200/300',
         'title': 'Shoes',
-        'description': 'Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester ,Imported,Smooth and comfortable lightweight jersey fabric',
-        'price': '123',
-        'size': 'M'
+        'description': 'Casual, slip-on styling with padded collar and concealed gore for accommodating fit',
+        'price': '789',
+        'size': 'L'
     },
     {
 
         'id': 4,
         'picture': 'https://picsum.photos/200/300',
         'title': 'Belt',
-        'description': 'Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester ,Imported,Smooth and comfortable lightweight jersey fabric',
-        'price': '123',
-        'size': 'M'
+        'description': 'Genuine Leather,New Design for Exact Fit,Width 1 3/8"',
+        'price': '753',
+        'size': 'XL'
     }]
 
     const getItems = new Promise((resolve, reject) => {

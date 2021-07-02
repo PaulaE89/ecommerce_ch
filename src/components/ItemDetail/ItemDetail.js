@@ -3,10 +3,6 @@ import { ItemCount } from '../ItemCount/ItemCount'
 
 export const ItemDetail = (itemDetail) => {
 
-    console.log('la fotoo',itemDetail.itemDetail[0].picture)
-
-
-
     return (
         <div className='itemDetail'>
             <div className='pictureDetail'>
@@ -17,7 +13,6 @@ export const ItemDetail = (itemDetail) => {
                 <div className='sizeDetail'>Size : {itemDetail.itemDetail[0].size}</div>
                 <div className='descriptionDetail'> Description :  {itemDetail.itemDetail[0].description} </div>
                 <div className='priceDetail'>${itemDetail.itemDetail[0].price}</div>
-
                 <ItemCount value={0} stock='10' />
             </div>
 
