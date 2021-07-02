@@ -10,7 +10,7 @@ export const NavBar = () => {
     return (
         <nav className="navBar">
             <div className="left-navBar">
-                <img src={hammyTitle} className='hammyTitle' alt='hammyimage' />
+                <img src={hammyTitle} className='hammyTitle' alt='hammyimage' href='/' />
             </div>
             <ul className="listItems" >
                 <li><NavLink exact to='/categories/category1' activeClassName='link-active' className='link'>Category1</NavLink></li>
