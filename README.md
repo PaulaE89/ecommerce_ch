@@ -5,9 +5,8 @@ Este proyecto fue  creado para realizar un Ecommerce, donde se podra  adicionar,
 
 ## Scripts Disponibles
 
-en el proyecto , se ejecuta con:
+El proyecto se ejecuta:
 
-In the project directory, you can run:
 
 ### `npm  run start`
 
