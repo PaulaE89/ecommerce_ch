@@ -3,6 +3,7 @@ import { Home } from './home/home'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { NavBar } from './components/navBar/navBar'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Cart } from './components/cart/cart'
 
 
 export const Routes = () => {
@@ -17,9 +18,12 @@ export const Routes = () => {
                 </Route>
                 <Route path='/categories/:categoryId'>
                     <ItemListContainer />
-                </Route>          
+                </Route>
                 <Route path='/item/:id'>
                     <ItemDetailContainer />
+                </Route>
+                <Route path='/cart'>
+                    <Cart />
                 </Route>
             </Switch>
         </Router>

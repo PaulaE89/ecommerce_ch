@@ -1,0 +1,11 @@
+
+export const Cart = () => {
+
+   
+
+    return (
+        <>
+            <h1>this is cart</h1>
+        </>
+    )
+}
