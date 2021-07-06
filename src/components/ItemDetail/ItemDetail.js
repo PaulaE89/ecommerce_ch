@@ -63,13 +63,8 @@ export const ItemDetail = (itemDetail) => {
                 <div className='descriptionDetail'> Description :  {itemDetail.itemDetail[0].description} </div>
                 <div className='priceDetail'>${itemDetail.itemDetail[0].price}</div>
                 <ItemCount value={value} stock={stock} onAdd={onAdd} subtraccion={subtraccion} counter={counter} disable={disable} buyNow={buyNow} />
-
                 <NavLink to='/cart' className='btn_confirm' counter={counter}><button className='btn_buy_now'>BUY NOW</button></NavLink>
-
-
-                {console.log('vauee', counter)}
             </div>
-
         </div>
     )
 
