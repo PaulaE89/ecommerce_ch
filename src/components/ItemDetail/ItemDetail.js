@@ -9,20 +9,38 @@ export const ItemDetail = (itemDetail) => {
 
     let value = 0
     let stock = '10'
+    let totalValue
+
+
+    const [counter, setCounter] = useState(value);
+
+
 
     const onAdd = () => {
 
-        let totalValue = document.getElementsByClassName('add_cart')[0]
-        totalValue = totalValue.value
-        if (totalValue === '0') {
+
+        if (counter === 0) {
             alert('you have to choose more than zero element')
         } else {
+
+
+
             let btndesaparecer = document.getElementsByClassName('btn_add_items')[0]
             btndesaparecer.style.display = 'none';
-            let dis = document.getElementsByClassName('btn_confirm')[0]
+            let dis = document.getElementsByClassName('btn_buy_now')[0]
             dis.style.display = 'block'
+
         }
     }
+
+
+    const prueba = () => {
+
+
+        console.log('totalValue', totalValue)
+    }
+
+    console.log()
 
 
     return (
@@ -35,8 +53,15 @@ export const ItemDetail = (itemDetail) => {
                 <div className='sizeDetail'>Size : {itemDetail.itemDetail[0].size}</div>
                 <div className='descriptionDetail'> Description :  {itemDetail.itemDetail[0].description} </div>
                 <div className='priceDetail'>${itemDetail.itemDetail[0].price}</div>
-                <ItemCount value={value} stock={stock} onAdd={onAdd} />
-                <NavLink to='/cart' className='btn_confirm' ><button className='btn_buy_now'>BUY NOW</button></NavLink>
+                <NavLink to='/cart' className='btn_buy_now' onClick={prueba} >BUY NOW</NavLink>
+                <ItemCount value={value} stock={stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />
+
+
+
+
+
+
+
             </div>
         </div>
     )

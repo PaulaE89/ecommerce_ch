@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 
 
 
-export const ItemCount = ({ value, stock ,onAdd}) => {
-    const [counter, setCounter] = useState(value);
+export const ItemCount = ({ value, stock ,onAdd, counter, setCounter}) => {
+    // const [counter, setCounter] = useState(value);
     const [disable, setDisable] = useState(false);
 
     const addition = () => {
@@ -28,11 +28,7 @@ export const ItemCount = ({ value, stock ,onAdd}) => {
     }
 
        
-    const handleChange = (e) => {
-        console.log('handle change called')
-    }
-
-
+    
 
     return (
         <div className='btn_add_items'>
@@ -40,7 +36,7 @@ export const ItemCount = ({ value, stock ,onAdd}) => {
               
                 <div className='btn_add_sub'>
                     <button onClick={subtraccion} className='btn_sign'>-</button>
-                    <input value={counter} onChange={(e) => { handleChange(e) }} className='value_buy' ></input>
+                    <input value={counter}  className='value_buy' ></input>
                     <button onClick={addition} disabled={disable} className='btn_sign'>+</button>
                 </div>
                 <div className='buy_btn'>

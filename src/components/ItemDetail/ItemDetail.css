@@ -30,8 +30,7 @@
 
 .btn_confirm{
 
-    display: none;
-    margin-top: 20px;
+   
  
 }
 
@@ -40,6 +39,9 @@
     border-radius: 5px;
     background: rgb(211,211,211);
     color: white;
+
+    display: none;
+    margin-top: 20px;
 }
   
 
