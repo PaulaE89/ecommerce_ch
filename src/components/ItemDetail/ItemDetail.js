@@ -13,34 +13,21 @@ export const ItemDetail = (itemDetail) => {
 
 
     const [counter, setCounter] = useState(value);
+    const [hide, setHide] = useState(false)
 
 
 
     const onAdd = () => {
-
-
         if (counter === 0) {
             alert('you have to choose more than zero element')
         } else {
 
-
-
-            let btndesaparecer = document.getElementsByClassName('btn_add_items')[0]
-            btndesaparecer.style.display = 'none';
-            let dis = document.getElementsByClassName('btn_buy_now')[0]
-            dis.style.display = 'block'
+            setHide(true)
 
         }
     }
 
 
-    const prueba = () => {
-
-
-        console.log('totalValue', totalValue)
-    }
-
-    console.log()
 
 
     return (
@@ -53,8 +40,8 @@ export const ItemDetail = (itemDetail) => {
                 <div className='sizeDetail'>Size : {itemDetail.itemDetail[0].size}</div>
                 <div className='descriptionDetail'> Description :  {itemDetail.itemDetail[0].description} </div>
                 <div className='priceDetail'>${itemDetail.itemDetail[0].price}</div>
-                <NavLink to='/cart' className='btn_buy_now' onClick={prueba} >BUY NOW</NavLink>
-                <ItemCount value={value} stock={stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />
+                {hide ? (<NavLink to='/cart' className='btn_buy_now' >BUY NOW</NavLink>) :
+                    (<ItemCount value={value} stock={stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />)}
 
 
 
