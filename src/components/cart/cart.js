@@ -1,11 +1,20 @@
+import { useCartContext } from '../../context/CartContext'
+
+
 
 export const Cart = () => {
 
-   
+    const { itemCart, removeItem, deleteAllProducts } = useCartContext();
+
+
 
     return (
-        <>
-            <h1>this is cart</h1>
-        </>
+        <div>
+            {itemCart.map((elem) =>
+                <div>    <p>{elem.title}</p> <button onClick={() => removeItem(elem.id)}>Delete</button> </div>
+
+            )}
+            <button onClick={() => deleteAllProducts()}>Delete ALL</button>
+        </div>
     )
 }

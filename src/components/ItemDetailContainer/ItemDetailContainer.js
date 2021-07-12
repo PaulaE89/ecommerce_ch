@@ -55,7 +55,7 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         getItems.then(elemento => {
 
-            setItemDetail(pruebaDetail.filter((elem) => elem.id == id))
+            setItemDetail(pruebaDetail.filter((elem) => elem.id === id))
 
         }).catch(err => {
             console.log('err :', err)

@@ -28,19 +28,13 @@
     color:rgb(64,224,208);
 }
 
-.btn_confirm{
 
-   
- 
-}
 
 .btn_buy_now{
 
     border-radius: 5px;
     background: rgb(211,211,211);
     color: white;
-/* 
-    display: none; */
     margin-top: 20px;
 }
   

@@ -15,6 +15,7 @@ export const ItemListContainer = (props) => {
         'title': 'T-shirt',
         'price': '123',
         'pictureUrl': 'https://picsum.photos/200/300',
+        'stock':24,
         'category': 'category1'
 
 
@@ -24,6 +25,7 @@ export const ItemListContainer = (props) => {
         'title': 'Trousers',
         'price': '456',
         'pictureUrl': 'https://picsum.photos/id/237/200/300',
+        'stock':2,
         'category': 'category2'
     },
     {
@@ -31,6 +33,7 @@ export const ItemListContainer = (props) => {
         'title': 'Shoes',
         'price': '789',
         'pictureUrl': 'https://picsum.photos/200/300',
+        'stock':4,
         'category': 'category3'
     },
 
@@ -38,6 +41,7 @@ export const ItemListContainer = (props) => {
         'id': 4,
         'title': 'Belt',
         'price': '753',
+        'stock':7,
         'pictureUrl': 'https://picsum.photos/id/237/200/300',
         'category': 'category1'
     }]
