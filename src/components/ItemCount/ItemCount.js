@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 
 
 
-export const ItemCount = ({ value, stock ,onAdd, counter, setCounter}) => {
+export const ItemCount = ({  stock ,onAdd, counter, setCounter}) => {
     // const [counter, setCounter] = useState(value);
     const [disable, setDisable] = useState(false);
 
     const addition = () => {
-        if (counter === 10) {
+        if (counter ===stock) {
             setDisable(true)
             alert(`there is only ${stock} in stock`)
         } else {
@@ -19,7 +19,7 @@ export const ItemCount = ({ value, stock ,onAdd, counter, setCounter}) => {
     const subtraccion = () => {
         if (counter === 0) {
             alert('It is zero')
-        } else if (counter === 10) {
+        } else if (counter === stock) {
             setDisable(false)
             setCounter((c) => c - 1)
         } else {

@@ -7,18 +7,10 @@ import { useCartContext } from '../../context/CartContext'
 
 
 export const ItemDetail = ({itemDetail}) => {
+    
 
-  
     const {addItem}=useCartContext();
-
-    // console.log('usecartcontext',useCartContext())
-
-    let value = 0
-    let stock = '10'
-    let totalValue
-
-
-    const [counter, setCounter] = useState(value);
+    const [counter, setCounter] = useState(0);
     const [hide, setHide] = useState(false)
 
 
@@ -29,12 +21,10 @@ export const ItemDetail = ({itemDetail}) => {
         } else {
 
             setHide(true)
+            addItem(itemDetail[0],counter)
 
         }
     }
-
-
-
 
 
 
@@ -48,8 +38,8 @@ export const ItemDetail = ({itemDetail}) => {
                 <div className='sizeDetail'>Size : {itemDetail[0].size}</div>
                 <div className='descriptionDetail'> Description :  {itemDetail[0].description} </div>
                 <div className='priceDetail'>${itemDetail[0].price}</div>
-                {hide ? (<NavLink to='/cart' className='btn_buy_now' onClick={()=>addItem(itemDetail[0],counter)}>BUY NOW</NavLink>) :
-                    (<ItemCount value={value} stock={stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />)}
+                {hide ? (<NavLink to='/cart' className='btn_buy_now' >BUY NOW</NavLink>) :
+                    (<ItemCount stock={ itemDetail[0].stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />)}
 
 
 

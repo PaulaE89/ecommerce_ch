@@ -19,6 +19,7 @@ export const ItemDetailContainer = () => {
         'title': 'T-shirt',
         'description': 'Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester ,Imported,Smooth and comfortable lightweight jersey fabric',
         'price': '123',
+        'stock':6,
         'size': 'S'
     },
     {
@@ -27,6 +28,7 @@ export const ItemDetailContainer = () => {
         'title': 'Trousers',
         'description': 'A flat-front dressy chino that offers classic style all week long; made to be wrinkle-resistant and easy-care with a traditional relaxed look and fit',
         'price': '456',
+        'stock':7,
         'size': 'M'
 
     },
@@ -36,6 +38,7 @@ export const ItemDetailContainer = () => {
         'title': 'Shoes',
         'description': 'Casual, slip-on styling with padded collar and concealed gore for accommodating fit',
         'price': '789',
+        'stock':8,
         'size': 'L'
     },
     {
@@ -45,6 +48,7 @@ export const ItemDetailContainer = () => {
         'title': 'Belt',
         'description': 'Genuine Leather,New Design for Exact Fit,Width 1 3/8"',
         'price': '753',
+        'stock':9,
         'size': 'XL'
     }]
 

@@ -15,7 +15,6 @@ export const ItemListContainer = (props) => {
         'title': 'T-shirt',
         'price': '123',
         'pictureUrl': 'https://picsum.photos/200/300',
-        'stock':24,
         'category': 'category1'
 
 
@@ -25,7 +24,6 @@ export const ItemListContainer = (props) => {
         'title': 'Trousers',
         'price': '456',
         'pictureUrl': 'https://picsum.photos/id/237/200/300',
-        'stock':2,
         'category': 'category2'
     },
     {
@@ -33,7 +31,6 @@ export const ItemListContainer = (props) => {
         'title': 'Shoes',
         'price': '789',
         'pictureUrl': 'https://picsum.photos/200/300',
-        'stock':4,
         'category': 'category3'
     },
 
@@ -41,14 +38,13 @@ export const ItemListContainer = (props) => {
         'id': 4,
         'title': 'Belt',
         'price': '753',
-        'stock':7,
         'pictureUrl': 'https://picsum.photos/id/237/200/300',
         'category': 'category1'
     }]
 
 
     const response = new Promise((resolve, reject) => {
-        
+
         setTimeout(() => { resolve(itemsPrueba) }, 2000)
 
     })
@@ -60,7 +56,7 @@ export const ItemListContainer = (props) => {
 
                 setItem(elemento);
             } else {
-             
+
                 setItem(itemsPrueba.filter((elem) => elem.category === categoryId))
             }
 
@@ -74,9 +70,9 @@ export const ItemListContainer = (props) => {
     return (
         <div>
             <h1 className='list_items'>HELLO {props.greeting} ¡¡ </h1>
-     
+
             {items ? (<ItemList items={items} />) : (<p className='loadItems'>LOADING PAGE ...</p>)}
-           
+
         </div>
     )
 }
