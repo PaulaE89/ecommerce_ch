@@ -70,7 +70,6 @@ export const ItemDetailContainer = () => {
 
     return (
         <div className='itemDetailContainer'>
-
             {itemDetail ? (<ItemDetail itemDetail={itemDetail}></ItemDetail>) : (<p className='loadItems'>LOADING PAGE ...</p>)}
         </div>
     )

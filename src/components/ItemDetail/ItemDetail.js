@@ -41,12 +41,6 @@ export const ItemDetail = ({itemDetail}) => {
                 {hide ? (<NavLink to='/cart' className='btn_buy_now' >BUY NOW</NavLink>) :
                     (<ItemCount stock={ itemDetail[0].stock} onAdd={onAdd} counter={counter} setCounter={setCounter} />)}
 
-
-
-
-
-
-
             </div>
         </div>
     )

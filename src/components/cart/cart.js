@@ -1,25 +1,35 @@
 import { useCartContext } from '../../context/CartContext'
 import { EachCart } from '../EachCart/EachCart'
+import { NavLink } from 'react-router-dom'
+import './cart.css'
+
 
 
 
 export const Cart = () => {
 
-    const { itemCart, removeItem, deleteAllProducts, cartQuantity, priceTotal } = useCartContext();
+    const { itemCart, deleteAllProducts, cartQuantity, priceTotal } = useCartContext();
 
-    console.log('price total',priceTotal)
-
-   
-
+    console.log('quatinty', cartQuantity)
 
     return (
         <div>
-            {itemCart.map((elem) => {
-                return <EachCart key={elem.id} product={elem} />
-            })}
+            {cartQuantity ? (<div>
+                <div className='tableBuyItems'>
+                    {itemCart.map((elem) => {
+                        return <EachCart key={elem.id} product={elem} />
+                    })}
 
-            <p>price total: {priceTotal}</p>
-            <button onClick={() => deleteAllProducts()}>Delete ALL</button>
+                    <div>
+                        <p> total: {priceTotal}</p>
+                    </div>
+
+                </div>
+                <div className='btnDeleteAll'>
+                    <button onClick={() => deleteAllProducts()}>Delete ALL</button>
+                </div>
+            </div>) : (<div><p>There is no product in the cart </p> <NavLink to='/'>Go home</NavLink> </div>)}
         </div>
+
     )
 }

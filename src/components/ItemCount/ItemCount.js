@@ -32,8 +32,7 @@ export const ItemCount = ({  stock ,onAdd, counter, setCounter}) => {
 
     return (
         <div className='btn_add_items'>
-            <div className='btn_add_buy'>
-              
+            <div className='btn_add_buy'>              
                 <div className='btn_add_sub'>
                     <button onClick={subtraccion} className='btn_sign'>-</button>
                     <input value={counter}  className='value_buy' ></input>
