@@ -1,24 +1,24 @@
 import { useCartContext } from '../../context/CartContext'
+import { EachCart } from '../EachCart/EachCart'
 
 
 
 export const Cart = () => {
 
-    const { itemCart, removeItem, deleteAllProducts ,cartQuantity,price} = useCartContext();
+    const { itemCart, removeItem, deleteAllProducts, cartQuantity, priceTotal } = useCartContext();
 
-    console.log('cartQuantity',itemCart)
+    console.log('price total',priceTotal)
 
-    console.log('price',price)
+   
 
 
     return (
         <div>
-            {itemCart.map((elem) =>
-                <div>    <p>{elem.title}</p> <p>x {elem.counter}</p><p> = {elem.price}</p> <button onClick={() => removeItem(elem.id)}>Delete</button> </div>
+            {itemCart.map((elem) => {
+                return <EachCart key={elem.id} product={elem} />
+            })}
 
-            )}
-
-            <p>price total: {price}</p>
+            <p>price total: {priceTotal}</p>
             <button onClick={() => deleteAllProducts()}>Delete ALL</button>
         </div>
     )

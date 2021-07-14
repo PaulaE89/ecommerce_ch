@@ -8,8 +8,8 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
 
     const [itemCart, setItemCart] = useState([])
-    const [cartQuantity, setCartQuantity]=useState(0)
-    const [price, setPrice]=useState(0)
+    const [cartQuantity, setCartQuantity] = useState(0)
+    const [priceTotal, setPriceTotal] = useState(0)
 
     const IsInCart = (id) => {
 
@@ -22,26 +22,36 @@ const CartContextProvider = ({ children }) => {
 
     const addItem = (product, counter) => {
         product.counter = counter;
-    
+
         let existCart = IsInCart(product.id)
 
         if (existCart) {
-            // console.log('the items are equals ')
-            // console.log('itemcart', itemCart)
-            existCart.counter += counter
-            setItemCart([...itemCart])
+
+
+
+            setItemCart(itemCart.map((elem) => elem.id === product.id ? { ...elem, counter: elem.counter + 1 } : elem));
+            // existCart.counter += counter
+
+            // setItemCart([...itemCart])
 
         } else {
 
-            // console.log('the items are not  equals')
+
             setItemCart([...itemCart, { ...product }])
-            // console.log('itemcart', itemCart)
+
         }
 
 
-        setCartQuantity(cartQuantity+1)
-        
-        setPrice(parseInt(price)+parseInt( product.price))
+        setCartQuantity(cartQuantity + 1)
+
+        console.log('pricetotal', priceTotal)
+
+        console.log('this is product', product)
+
+
+
+
+        setPriceTotal(parseInt(priceTotal) + parseInt(product.price))
 
 
 
@@ -50,9 +60,9 @@ const CartContextProvider = ({ children }) => {
 
 
     const removeItem = (itemId) => {
-   
+
         setItemCart(itemCart.filter(elem => elem.id !== itemId))
-        setCartQuantity(cartQuantity-1)
+        setCartQuantity(cartQuantity - 1)
         //setPrice(price- product.price)
 
     }
@@ -60,12 +70,15 @@ const CartContextProvider = ({ children }) => {
     const deleteAllProducts = () => {
 
         setItemCart([])
+        setPriceTotal(0)
+        setCartQuantity(0)
+
     }
 
 
     return (
 
-        <CartContext.Provider value={{ addItem, itemCart, removeItem, deleteAllProducts,cartQuantity,price }}  >
+        <CartContext.Provider value={{ addItem, itemCart, removeItem, deleteAllProducts, cartQuantity, priceTotal }}  >
             {children}</CartContext.Provider>
     )
 }
