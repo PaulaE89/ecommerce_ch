@@ -3,6 +3,8 @@ import './Item.css'
 import { NavLink } from 'react-router-dom'
 export const Item = ({ item }) => {
 
+    console.log('el item buscado',item)
+
     const { id, title, price, pictureUrl } = item
     
     return (

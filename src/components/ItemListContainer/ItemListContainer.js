@@ -5,135 +5,48 @@ import { useParams } from 'react-router-dom'
 
 import { dataBase } from '../../Firebase/firebase'
 
-//import {getFirestore} from '../../Firebase/firebase'
+
+
 
 export const ItemListContainer = (props) => {
 
 
     const [items, setItem] = useState(undefined);
     const { categoryId } = useParams()
-
     const [IsLoading, setLoading] = useState(false);
 
-    // const itemsPrueba = [{
-    //     'id': 1,
-    //     'title': 'T-shirt',
-    //     'price': '123',
-    //     'pictureUrl': 'https://picsum.photos/200/300',
-    //     'category': 'category1'
-
-
-    // },
-    // {
-    //     'id': 2,
-    //     'title': 'Trousers',
-    //     'price': '456',
-    //     'pictureUrl': 'https://picsum.photos/id/237/200/300',
-    //     'category': 'category2'
-    // },
-    // {
-    //     'id': 3,
-    //     'title': 'Shoes',
-    //     'price': '789',
-    //     'pictureUrl': 'https://picsum.photos/200/300',
-    //     'category': 'category3'
-    // },
-
-    // {
-    //     'id': 4,
-    //     'title': 'Belt',
-    //     'price': '753',
-    //     'pictureUrl': 'https://picsum.photos/id/237/200/300',
-    //     'category': 'category1'
-    // }]
-
-
-    // const response = new Promise((resolve, reject) => {
-
-    //     setTimeout(() => { resolve(itemsPrueba) }, 2000)
-
-    // })
-
-    // useEffect(() => {
-    //     response.then(elemento => {
-
-    //         if (categoryId === undefined) {
-
-    //             setItem(elemento);
-    //         } else {
-
-    //             setItem(itemsPrueba.filter((elem) => elem.category === categoryId))
-    //         }
-
-    //     }).catch(err => {
-    //         console.log('err :', err)
-    //     })
-    // }, [categoryId])
-
-
+  
     useEffect(() => {
 
         setLoading(true);
         const db = dataBase;
-
-        console.log('db', db)
         const itemCollection = db.collection('products_hammy');
+        itemCollection.get().then((response) => {
 
-        itemCollection.get().then((querySnapshot) => {
-
-            if (querySnapshot.size === 0) {
+            if (response.size === 0) {
 
                 console.log('No results')
+
+            } else if (categoryId === undefined) {
+
+                console.log('data',response)
+                setItem(response.docs.map(doc => doc.data()));
+            } else {
+                let data = response.docs.map(doc => doc.data());
+                console.log('data', data)
+                setItem(data.filter((elem) => elem.category === categoryId))
+                setLoading(false);
             }
-            setItem(querySnapshot.docs.map(doc => doc.data()));
 
         }).catch((error) => {
-
             console.log('error :', error)
         }).finally(() => {
-
             setLoading(false);
         })
-
-
-    }, [])
+    }, [categoryId])
 
 
 
-    //--------//
-
-
-    useEffect(() => {
-
-        const db = dataBase;
-
-        const itemCollection = db.collection('products_hammy');
-        const item = itemCollection.doc('')
-
-        item.get().then((doc) => {
-
-
-            if (!doc.exists) {
-
-                console.log('item does not exist ')
-                return
-
-            }
-
-            console.log('item found ')
-            setItem({id: doc.id, ...doc.data()})
-        }).catch((error)=>{
-
-            console.log('error',error)
-        }).finally(()=>{
-            setLoading(false)
-        })
-
-
-    },[])
-
-
-    //--------//
 
 
     return (

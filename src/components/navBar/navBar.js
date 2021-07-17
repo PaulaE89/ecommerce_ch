@@ -23,7 +23,7 @@ export const NavBar = () => {
                 <li><NavLink to='/categories/category2' activeClassName='link-active' className='link'>Category2</NavLink></li>
                 <li><NavLink to='/categories/category3' activeClassName='link-active' className='link'>Category3</NavLink></li>
             </ul>
-            {cartQuantity>0 ?(<CartWidget></CartWidget>):(<></>)}
+           <NavLink to='/cart'> {cartQuantity>0 ?(<CartWidget></CartWidget>):(<></>)}</NavLink>
         </nav>)
 
 }
