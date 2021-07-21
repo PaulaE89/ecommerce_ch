@@ -25,9 +25,12 @@ export const Cart = () => {
                     </div>
 
                 </div>
+                
                 <div className='btnDeleteAll'>
                     <button onClick={() => deleteAllProducts()}>Delete ALL</button>
+                    <div><NavLink to='/order'> BUY</NavLink></div>
                 </div>
+                
             </div>) : (<div><p>There is no product in the cart </p> <NavLink to='/'>Go home</NavLink> </div>)}
         </div>
 

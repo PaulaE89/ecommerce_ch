@@ -4,6 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { NavBar } from './components/navBar/navBar'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Cart } from './components/cart/cart'
+import {Order} from './components/Order/Order'
 
 
 export const Routes = () => {
@@ -24,6 +25,9 @@ export const Routes = () => {
                 </Route>
                 <Route path='/cart'>
                     <Cart />
+                </Route>
+                <Route path='/order'>
+                    <Order />
                 </Route>
             </Switch>
         </Router>
