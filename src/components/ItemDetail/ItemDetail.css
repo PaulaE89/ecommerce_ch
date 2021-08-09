@@ -7,6 +7,7 @@
 .itemDetail{
     display: flex;
     flex-direction: row;
+
 }
 
 .informationDetail{
@@ -35,8 +36,16 @@
     border-radius: 5px;
     background: rgb(211,211,211);
     color: white;
-    margin-top: 20px;
+    margin: 20px 180px;
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+    
 }
   
+
+.pictureImage{
+
+    height: 200px;
+}
 
 

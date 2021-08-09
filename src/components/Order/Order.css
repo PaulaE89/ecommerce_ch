@@ -1,0 +1,59 @@
+
+.confirmPurchase{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:80px 350px;
+    border: 2px solid #40E0D0;
+    border-radius: 10px;
+    
+}
+
+
+.nameOrder{
+
+   text-align: center;
+    margin-bottom: 50px;
+    color:rgb(64,224,208);
+    font-size: 30px;
+}
+
+
+.btnConfirm{
+
+    margin:50px 30px;
+    color:white;
+    border-radius: 10px;
+    background: rgb(211,211,211);
+    padding: 5px;
+    
+}
+
+.btnConfirm:hover{
+
+    background: rgb(64,224,208);
+}
+
+
+.msnOrderId{
+
+    display: flex;
+    justify-content: center;
+    padding:80px 0;
+
+}
+
+
+.formPurchase{
+    
+    text-align: center;
+        
+}
+
+.form{
+
+    border-radius: 20px;
+}
+
+   

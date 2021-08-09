@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 
 export const ItemCount = ({  stock ,onAdd, counter, setCounter}) => {
-    // const [counter, setCounter] = useState(value);
     const [disable, setDisable] = useState(false);
 
     const addition = () => {
@@ -28,6 +27,10 @@ export const ItemCount = ({  stock ,onAdd, counter, setCounter}) => {
     }
 
        
+    const prueba=()=>{
+
+        console.log('prueba')
+    }
     
 
     return (
@@ -39,7 +42,7 @@ export const ItemCount = ({  stock ,onAdd, counter, setCounter}) => {
                     <button onClick={addition} disabled={disable} className='btn_sign'>+</button>
                 </div>
                 <div className='buy_btn'>
-               <button className='add_cart' onClick={onAdd} value={counter}>ADD TO CART</button> 
+               <button className='add_cart' onClick={onAdd} value={counter} >ADD TO CART</button> 
                 </div>
             </div>
         </div>

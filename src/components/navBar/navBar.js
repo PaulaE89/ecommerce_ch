@@ -1,17 +1,17 @@
 import './navBar.css'
-import hammy from '../../assets/hammy.png'
+// import hammy from '../../assets/hammy.png'
 import hammyTitle from '../../assets/hammyTitle.png'
 import { CartWidget } from '../CartWidget/CartWidget'
 import { NavLink } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
-import {  useState } from 'react'
+
 
 
 export const NavBar = () => {
 
     const { cartQuantity } = useCartContext();
 
-    const [disable, setDisable] = useState(false);
+   
 
     return (
         <nav className="navBar">

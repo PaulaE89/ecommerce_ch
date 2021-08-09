@@ -5,3 +5,17 @@
     margin-left: 50px;
 
 }
+
+.dot{
+
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    margin-left: -15px;
+    padding: 2px 0 0 1px;
+    color:white;
+}
+

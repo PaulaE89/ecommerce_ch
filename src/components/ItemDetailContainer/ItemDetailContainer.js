@@ -12,6 +12,7 @@ export const ItemDetailContainer = () => {
     const [IsLoading, setLoading] = useState(false);
     let { id } = useParams()
 
+   
     useEffect(() => {
 
         const db = dataBase;
@@ -21,20 +22,17 @@ export const ItemDetailContainer = () => {
                 console.log('item does not exist ')
             }
 
-            let data=doc.docs.map(doc => doc.data())
-            setItemDetail(data.filter(elem=>elem.id===id))
-        }).catch((error)=>{
-            console.log('error',error)
-        }).finally(()=>{
+            let data = doc.docs.map(doc => doc.data())
+            setItemDetail(data.filter(elem => elem.id === id))
+
+        }).catch((error) => {
+            console.log('error', error)
+        }).finally(() => {
             setLoading(false)
         })
 
 
-    },[id])
-
-
-    
-
+    }, [id])
 
     return (
         <div className='itemDetailContainer'>

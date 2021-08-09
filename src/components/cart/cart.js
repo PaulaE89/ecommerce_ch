@@ -13,25 +13,25 @@ export const Cart = () => {
     console.log('quatinty', cartQuantity)
 
     return (
-        <div>
+        <div className='tableMainBuys'>
             {cartQuantity ? (<div>
                 <div className='tableBuyItems'>
                     {itemCart.map((elem) => {
                         return <EachCart key={elem.id} product={elem} />
                     })}
 
-                    <div>
-                        <p> total: {priceTotal}</p>
+                    <div className='totalPrice'>
+                        <p className='totalPriceText'> Total Price: ${priceTotal}</p>
                     </div>
 
                 </div>
                 
                 <div className='btnDeleteAll'>
-                    <button onClick={() => deleteAllProducts()}>Delete ALL</button>
-                    <div><NavLink to='/order'> BUY</NavLink></div>
+                    <button onClick={() => deleteAllProducts()} className='removeAll'>Remove All</button>
+                    <div><NavLink to='/order' className='buyItem'> Buy</NavLink></div>
                 </div>
                 
-            </div>) : (<div><p>There is no product in the cart </p> <NavLink to='/'>Go home</NavLink> </div>)}
+            </div>) : (<div className='noProducts'><p className='textNoProducts'>There is no product in the cart </p> <NavLink to='/' className='homeAgain'>Go home</NavLink> </div>)}
         </div>
 
     )

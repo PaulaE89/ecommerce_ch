@@ -9,7 +9,7 @@ export const CartWidget = () => {
     const { cartQuantity } = useCartContext();
 
     return (
-        <div><img src={imageCart} className='cartImage' alt='image_cart'></img><span>{cartQuantity}</span>
+        <div><img src={imageCart} className='cartImage' alt='image_cart'></img><span className='dot'>{cartQuantity}</span>
         </div>
 
     )
